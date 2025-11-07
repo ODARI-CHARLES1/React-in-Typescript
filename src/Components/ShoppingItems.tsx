@@ -2,9 +2,10 @@ import React,{ useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { shopContext, Shopping } from "../Contexts/Shopping/shoppingContext";
 import { Product } from "../Types/product.types";
-
+import {useNavigate} from 'react-router-dom'
 
 const ShoppingItems: React.FC = () => {
+  const navigate=useNavigate()
   const {quantity,setQuantity}=useContext<Shopping>(shopContext)
   console.log(quantity)
   const [data, setData] = useState<Product[]>([]);
@@ -15,6 +16,7 @@ const ShoppingItems: React.FC = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get<Product[]>("https://fakestoreapi.com/products");
+        
         setData(res.data);
       } catch (err) {
         console.error(err);
@@ -53,7 +55,7 @@ const ShoppingItems: React.FC = () => {
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap gap-4 justify-center items-center -m-4">
           {data.map((product) => (
-            <div key={product.id} className="lg:w-1/5 hover:shadow-2x transition shadow-xl md:w-1/2 p-4 w-full">
+            <div onClick={()=>{navigate("/product")}} key={product.id} className="lg:w-1/5 hover:shadow-2x transition shadow-xl md:w-1/2 p-4 w-full">
               <div className="block relative h-48 rounded overflow-hidden">
                 <img
                   alt={product.title}

@@ -1,5 +1,4 @@
 import { useLocation } from "react-router-dom";
-import Form from "../Components/form";
 import Hero from "../Components/Hero";
 import Navbar from "../Components/Navbar";
 import ShoppingItems from "../Components/ShoppingItems";
@@ -24,8 +23,6 @@ const HomePage = () => {
       <div className="divider"></div>
       <Hero />
       <div className="divider"></div>
-      <Form />
-
       <div className="divider"></div>
       <ShoppingItems />
     </div>

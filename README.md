@@ -18,7 +18,10 @@ This is a shopping application built with React 19, TypeScript, and Vite. The pr
 - **React 19**: Latest React version with concurrent features
 - **TypeScript**: Static type checking for JavaScript
 - **Vite**: Fast build tool and development server
-- **Tailwind CSS**: Utility-first CSS framework
+- | **Tailwind CSS**: Utility-first CSS framew |  |  |
+  | ------------------------------------------------ | - | - |
+  |                                                  |  |  |
+  |                                                  |  |  |
 - **Material-UI**: React components implementing Google's Material Design
 - **React Router DOM**: Declarative routing for React
 - **Axios**: HTTP client for API requests
@@ -111,17 +114,20 @@ src/
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd react-hooks-typescript
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -152,21 +158,25 @@ The project uses a strict TypeScript configuration with the following key settin
 ## Best Practices Demonstrated
 
 ### 1. Type Safety
+
 - All components use proper TypeScript interfaces
 - Props are typed to prevent runtime errors
 - Context values are strongly typed
 
 ### 2. Custom Hooks
+
 - Business logic extracted into reusable hooks
 - Proper typing for hook return values
 - Error boundaries for context usage
 
 ### 3. Component Composition
+
 - Functional components with hooks
 - Proper prop drilling prevention using context
 - Separation of concerns between UI and logic
 
 ### 4. State Management
+
 - Local state with useState
 - Global state with Context API
 - Immutable state updates
