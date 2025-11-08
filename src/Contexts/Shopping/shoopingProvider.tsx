@@ -23,6 +23,7 @@ export const ShopProvider: FC<ShopProviderProps> = ({ children }) => {
       } finally {
         setLoading(false);
       }
+      
     };
 
     fetchData();
